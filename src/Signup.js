@@ -19,7 +19,7 @@ export default function Signup(){
    
     
 
-    // const myNav = useNavigate();
+     const myNav = useNavigate();
 
     const myChangeHandler = (e)=>{
 
@@ -38,10 +38,13 @@ export default function Signup(){
                 "Content-Type":"application/json"
             }
             
-        }).then(y=>y);
+        }).then(y=> {
+            myNav("/");    
         
-        console.log(data);
-        // myNav("/productlist");
+        });
+        
+       
+        
 
        
     }
@@ -50,7 +53,7 @@ export default function Signup(){
 
 
     return(
-        <div className="signup-form">
+        <div className="signup-form body">
     <form  onSubmit={mySubmit}>
 		<h2>Sign Up</h2>
 		{/* <p>It's free and only takes a minute.</p> */}
@@ -78,7 +81,7 @@ export default function Signup(){
         </div>
 		
     </form>
-	<div className="text-center">Already have an account? <Link to="/" >Login here</Link></div>
+	<div className="text-center">Already have an account? <Link to="/" style={{color: "red"}}>Login here</Link></div>
 </div>
     )
 }

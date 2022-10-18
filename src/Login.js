@@ -69,7 +69,7 @@ const[data,setData]= useState({
         </div>
 		
     </form>
-	<div className="text-center">Don't have an account? <Link to="/signup">Signup here</Link></div>
+	<div className="text-center">Don't have an account? <Link to="/signup" style={{color: "red"}}>Signup here</Link></div>
 </div>
     )
 }
